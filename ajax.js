@@ -1,6 +1,13 @@
-// function dosomething(id) {
-//     id.innerHTML = "fetched....";
-//     }
+
+
+
+const generateTable = () => {
+
+
+
+}
+
+
 
 window.onload = function() {
 (function() {
@@ -22,7 +29,11 @@ window.onload = function() {
     function alertContents() {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
             if(httpRequest.status === 200) {
-                document.write(httpRequest.responseText);
+                // document.write(httpRequest.responseText);
+                var response = httpRequest.response
+                return response
+
+
             } else {
                 alert("There was a problem with the request");
             }
