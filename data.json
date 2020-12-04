@@ -1,0 +1,23 @@
+{
+    "Education" : [
+        {
+            "school": "Bunker Hill (BHCC)",
+            "major": "Psychology",
+            "degree":"Associate Degree",
+            "graduation":"December, 2015"
+        },
+        {
+            "school": "Smith College",
+            "major": "Neuroscience",
+            "degree":"Bachelor of Arts",
+            "graduation":"January, 2018"
+        },
+        {
+            "school": "Boston University",
+            "major": "Software Development",
+            "degree":"Master of Science",
+            "graduation":"TBD"
+        }
+
+    ]
+}
