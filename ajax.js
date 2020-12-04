@@ -29,7 +29,7 @@ window.onload = function() {
     function alertContents() {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
             if(httpRequest.status === 200) {
-                document.write(httpRequest.responseXML);
+                document.write(httpRequest.responseJSON);
 
 
             } else {
