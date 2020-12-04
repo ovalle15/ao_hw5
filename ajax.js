@@ -30,7 +30,7 @@ window.onload = function() {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
             if(httpRequest.status === 200) {
                 // document.write(httpRequest.responseText);
-                var response = httpRequest.response
+                var response = httpRequest.responseText
                 return response
 
 
