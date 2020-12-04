@@ -29,9 +29,7 @@ window.onload = function() {
     function alertContents() {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
             if(httpRequest.status === 200) {
-                // document.write(httpRequest.responseText);
-                var response = httpRequest.responseXML
-                return response
+                document.write(httpRequest.responseXML);
 
 
             } else {
