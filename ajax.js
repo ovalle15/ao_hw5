@@ -2,6 +2,11 @@
 
 
 const generateTable = () => {
+    var content = '';
+    for  (var i =0; responseInJson.events.length; i++){
+        content += '<div class="event">';
+    }
+    return content;
 
 
 
@@ -29,9 +34,8 @@ window.onload = function() {
     function alertContents() {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
             if(httpRequest.status === 200) {
-                    responseInJson = JSON.parse(httpRequest.responseText)
-
-
+                var responseInJson = JSON.parse(httpRequest.responseText)
+                generateTable(responseInJson)
             } else {
                 alert("There was a problem with the request");
             }
