@@ -81,6 +81,9 @@ const generateTable = () => {
 
     }
 
+    const button = document.createElement("button")
+    table.appendChild()
+
 document.getElementById('div-table').appendChild(table);
 
 }
