@@ -62,9 +62,7 @@ window.onload = function() {
     function alertContents() {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
             if(httpRequest.status === 200) {
-                responseInJson = JSON.parse(httpRequest.responseText)
-                list1 = responseInJson.Education;
-                generateTable(list1)
+                document.write(JSON.parse(httpRequest.responseText))
             } else {
                 alert("There was a problem with the request");
             }
