@@ -1,44 +1,89 @@
 
+// json = {
+//     "Education" : [
+//         {
+//             "school": "Bunker Hill (BHCC)",
+//             "major": "Psychology",
+//             "degree":"Associate Degree",
+//             "graduation":"December, 2015"
+//         },
+//         {
+//             "school": "Smith College",
+//             "major": "Neuroscience",
+//             "degree":"Bachelor of Arts",
+//             "graduation":"January, 2018"
+//         },
+//         {
+//             "school": "Boston University",
+//             "major": "Software Development",
+//             "degree":"Master of Science",
+//             "graduation":"TBD"
+//         }
 
-
-
-// const generateRows = () => {
-
+//     ]
 // }
 
-// const generateHeaders = () => {
+
+class Elements
+{
+    static FetchTableHeadings ()
+    {
+        return ["School Name", "Major", "Degree Type", "Graduation"]
+    }
+    static FetchKeyNames ()
+    {
+        return Object.keys(this.FetchJsonElement()[0])
+    }
+    static FetchJsonElement ()
+    {
+        return json.Education
+    }
+}
+
+const generateTable = () => {
+
+    const jsonElements = Elements.FetchJsonElement() ;
+    const headings = Elements.FetchTableHeadings();
+    const KeyVals = Elements.FetchKeyNames();
+
+    const table = document.createElement("table");
+    const caption = document.createElement('caption')
+
+    const captionText = document.createTextNode("Json Elements");
+
+    caption.appendChild(captionText);
+    table.appendChild(caption);
+
+    const rowheadings = document.createElement("tr")
+    table.appendChild(rowheadings);
 
 
-// }
+    for (let heading of headings)
+    {
+        const th = document.createElement("th");
+        const thinfo = document.createTextNode(heading);
+        th.appendChild(thinfo);
+        rowheadings.appendChild(th);
+    }
+    for (let element of jsonElements)
+    {
+        const drow = document.createElement("tr");
+        table.appendChild(drow);
 
-// const generateTable = () => {
+        for (let key of KeyVals)
 
-//     let tableHTML = "<table>"
+        {
+            const td = document.createElement("td");
+            const tdinfo = document.createTextNode(element[key]);
+            td.appendChild(tdinfo);
+            drow.appendChild(td);
+        }
 
-//         tableHTML += "<tr>"
-//             tableHTML += "<td>&nbsp;</td>"
-//             tableHTML += "<th>Program/Major</th>"
-//             tableHTML += "<th>Degree Type</th>"
-//             tableHTML +="<th>Graduation Year</th>"
-//         tableHTML += "</tr>"
+    }
 
-//         tableHTML += "<tr>"
-//         for (var i = 0; i < list1.length; i++){
-//             tableHTML += "<th>${list1[i].name}</th>"
-//             // var schoolNameValue = ;
-//             // var MajorValue = list1[i].major;
-//             // var DegreeValue = list1[i].degree;
-//             // var graduationDateValue = list1[i].graduation;
-//      }
+document.getElementById('div-table').appendChild(table);
 
-//         tableHTML += "</tr>"
-
-
-
-//     tableHTML += "</table>"
-
-
-// }
+}
 
 window.onload = function() {
 (function() {
@@ -60,11 +105,30 @@ window.onload = function() {
     function alertContents() {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
             if(httpRequest.status === 200) {
-                jsondoc = JSON.parse(httpRequest.responseText)
-                document.write(jsondoc)
+                json = JSON.parse(httpRequest.responseText)
+                generateTable()
             } else {
                 alert("There was a problem with the request");
             }
         }
     }})();
 }
+
+
+
+
+// function createTableCells() {
+//     let tableCells = "";
+//     for (const key in list1[0]) {
+//         tableCells += `<td>${list1[0][key]}</td>`
+//     }
+//     return tableCells;
+// }
+
+// const templateTableRow = `
+// <tr>
+//     ${createTableCells()}
+// </tr>
+// `;
+
+// document.getElementsById('div-table')[0].insertAdjacentHTML("beforeend", templateTableRow);
