@@ -1,5 +1,5 @@
 
-list1 = responseInJson.Education;
+
 
 
 const generateRows = () => {
@@ -63,7 +63,8 @@ window.onload = function() {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
             if(httpRequest.status === 200) {
                 responseInJson = JSON.parse(httpRequest.responseText)
-                generateTable(responseInJson)
+                list1 = responseInJson.Education;
+                generateTable(list1)
             } else {
                 alert("There was a problem with the request");
             }
