@@ -1,12 +1,19 @@
 
 
 
+
 const generateTable = () => {
-    var content = '';
-    for  (var i =0; responseInJson.events.length; i++){
-        content += '<div class="event">';
-    }
-    return content;
+
+    list1 = responseInJson.Education;
+
+
+
+    var schoolName = list1[0]['name'];
+    var Major = list1[1]['major'];
+    var Degree = list1[2]['degree'];
+    var graduationDate = list1[3]['graduation'];
+
+
 
 
 
