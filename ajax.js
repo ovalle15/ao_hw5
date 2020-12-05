@@ -1,20 +1,41 @@
 
+list1 = responseInJson.Education;
 
 
+const generateRows = () => {
+
+}
+
+const generateHeaders = () => {
+
+
+}
 
 const generateTable = () => {
 
-    list1 = responseInJson.Education;
+    let tableHTML = "<table>"
+
+        tableHTML += "<tr>"
+            tableHTML += "<td>&nbsp;</td>"
+            tableHTML += "<th>Program/Major</th>"
+            tableHTML += "<th>Degree Type</th>"
+            tableHTML +="<th>Graduation Year</th>"
+        tableHTML += "</tr>"
+
+        tableHTML += "<tr>"
+        for (var i = 0; i < list1.length; i++){
+            tableHTML += "<th>${list1[i].name}</th>"
+            // var schoolNameValue = ;
+            // var MajorValue = list1[i].major;
+            // var DegreeValue = list1[i].degree;
+            // var graduationDateValue = list1[i].graduation;
+     }
+
+        tableHTML += "</tr>"
 
 
 
-    var schoolName = list1[0]['name'];
-    var Major = list1[1]['major'];
-    var Degree = list1[2]['degree'];
-    var graduationDate = list1[3]['graduation'];
-
-
-
+    tableHTML += "</table>"
 
 
 }
