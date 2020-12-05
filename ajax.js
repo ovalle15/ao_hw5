@@ -1,29 +1,3 @@
-
-// json = {
-//     "Education" : [
-//         {
-//             "school": "Bunker Hill (BHCC)",
-//             "major": "Psychology",
-//             "degree":"Associate Degree",
-//             "graduation":"December, 2015"
-//         },
-//         {
-//             "school": "Smith College",
-//             "major": "Neuroscience",
-//             "degree":"Bachelor of Arts",
-//             "graduation":"January, 2018"
-//         },
-//         {
-//             "school": "Boston University",
-//             "major": "Software Development",
-//             "degree":"Master of Science",
-//             "graduation":"TBD"
-//         }
-
-//     ]
-// }
-
-
 class Elements
 {
     static FetchTableHeadings ()
@@ -49,7 +23,7 @@ const generateTable = () => {
     const table = document.createElement("table");
     const caption = document.createElement('caption')
 
-    const captionText = document.createTextNode("Json Elements");
+    const captionText = document.createTextNode("Education Background");
 
     caption.appendChild(captionText);
     table.appendChild(caption);
@@ -80,9 +54,6 @@ const generateTable = () => {
         }
 
     }
-
-    const button = document.createElement("button")
-    table.appendChild()
 
 document.getElementById('div-table').appendChild(table);
 
