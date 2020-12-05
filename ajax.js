@@ -23,7 +23,7 @@ const generateTable = () => {
     const table = document.createElement("table");
     const caption = document.createElement('caption')
 
-    const captionText = document.createTextNode("Education Background");
+    const captionText = document.createTextNode("Education");
 
     caption.appendChild(captionText);
     table.appendChild(caption);
