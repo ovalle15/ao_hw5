@@ -60,8 +60,8 @@ window.onload = function() {
     function alertContents() {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
             if(httpRequest.status === 200) {
-                jsondoc = httpRequest.responseText
-                document.write(JSON.parse(jsondoc))
+                jsondoc = JSON.parse(httpRequest.responseText)
+                document.write(jsondoc)
             } else {
                 alert("There was a problem with the request");
             }
