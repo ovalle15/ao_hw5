@@ -29,11 +29,7 @@ window.onload = function() {
     function alertContents() {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
             if(httpRequest.status === 200) {
-                var response = httpRequest.responseText
-                $.ajax ({
-                    responseInJson = jQuery.parseJSON(response.responseText)
-                })
-                document.write(responseInJson)
+                    responseInJson = JSON.parse(httpRequest.responseText)
 
 
             } else {
