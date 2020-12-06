@@ -95,6 +95,7 @@ window.onload = function() {
     document.getElementById("button").onclick = function() {
         // requests the data json file
         makeRequest("data.json");
+        // once the button is clicked once, it becomes disabled
         document.getElementById("button").disabled = true;
     };
     // makes the XMLHttp request

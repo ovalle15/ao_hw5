@@ -67,5 +67,6 @@ caption {
   position: relative;
   top: 1px;
   background-color: gray;
-  opacity: 0.2%;
+  opacity: 0.4;
+  border: black;
 }
