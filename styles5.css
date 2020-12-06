@@ -63,3 +63,9 @@ caption {
 	position:relative;
 	top:1px;
 }
+.button1:disabled{
+  position: relative;
+  top: 1px;
+  background-color: gray;
+  opacity: 0.2%;
+}
